@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "./globals.css"
 import { Sora } from "next/font/google"
-import Footer from "@/components/footer"
+import ConditionalFooter from "@/components/ConditionalFooter"
 import DynamicHeader from "@/components/DynamicHeader"
 
 const sora = Sora({
@@ -15,15 +15,13 @@ export const metadata = {
   description: "Qurate AI helps you collect and understand information through intelligent, human-like dialogue.",
 }
 
-
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sora.className}>
-      <body className="bg-black text-white relative">
-        <DynamicHeader  />
-        <main>{children}</main>
-        <Footer />
+      <body className="text-white  flex flex-col min-h-screen">
+        <DynamicHeader />
+        <main className="flex-1 bg-gradient-to-br from-quinary to-gray-950/90">{children}</main>
+        <ConditionalFooter />
       </body>
     </html>
   )
