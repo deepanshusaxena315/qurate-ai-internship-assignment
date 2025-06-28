@@ -15,8 +15,8 @@ const MinimalHeader = () => {
   }
 
   return (
-    <div className='flex justify-between items-center p-6 bg-gradient-to-b from-gray-800/95 to-quaternary/90 backdrop-blur-md border-b border-gray-700/50 shadow-xl'>
-        <h1>Qurate AI</h1>
+    <div className='flex justify-between items-center p-6 bg-quinary backdrop-blur-md border-b border-gray-700/50 shadow-xl'>
+        <h1 className="text-white text-2xl font-bold tracking-tight">Qurate AI</h1>
         <div className='flex gap-4'>
             <button 
               onClick={handleLogin}

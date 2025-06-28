@@ -22,7 +22,7 @@ export default function DynamicHeader() {
   if (pathname === "/") return <Header variant="landing" />
   if (pathname === "/audio-chat" || pathname === "/admin") {
     return (
-      <header className="p-6 bg-gradient-to-b from-gray-800/95 to-quaternary/90 backdrop-blur-md border-b border-gray-700/50 shadow-xl flex justify-between items-center">
+      <header className="p-6 bg-quinary backdrop-blur-md border-b border-gray-700/50 shadow-xl flex justify-between items-center">
         <div className="flex items-center gap-4">
           <button
             onClick={handleBackToDashboard}

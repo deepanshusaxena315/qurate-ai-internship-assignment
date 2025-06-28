@@ -151,7 +151,7 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-md bg-quinary text-white border-quaternary">
+      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
         <CardHeader>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -163,14 +163,14 @@ const Page = () => {
           </motion.div>
         </CardHeader>
         <form onSubmit={handleSubmit}>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6 px-8 py-6">
             <motion.div 
               className="space-y-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <label htmlFor="username" className="text-sm font-medium">
+              <label htmlFor="username" className="text-sm font-medium text-white">
                 Username
               </label>
               <div className="relative">
@@ -179,8 +179,8 @@ const Page = () => {
                   id="username"
                   name="username"
                   type="text"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.username ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.username ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Enter your username"
                   value={formData.username}
@@ -192,7 +192,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.username}
                 </motion.p>
@@ -204,7 +204,7 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <label htmlFor="password" className="text-sm font-medium">
+              <label htmlFor="password" className="text-sm font-medium text-white">
                 Password
               </label>
               <div className="relative">
@@ -213,8 +213,8 @@ const Page = () => {
                   id="password"
                   name="password"
                   type="password"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.password ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.password ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Enter your password"
                   value={formData.password}
@@ -226,7 +226,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.password}
                 </motion.p>
@@ -234,7 +234,7 @@ const Page = () => {
             </motion.div>
             <motion.button 
               type="submit" 
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="w-full bg-primary/60 text-white py-4 px-4 rounded-md hover:bg-primary/70 transition-colors duration-200 font-medium"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -287,7 +287,7 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-md bg-quinary text-white border-quaternary">
+      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
         <CardHeader>
           <motion.div 
             className="flex items-center space-x-2"
@@ -310,14 +310,14 @@ const Page = () => {
           </motion.div>
         </CardHeader>
         <form onSubmit={handleSubmit}>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6 px-8 py-6">
             <motion.div 
               className="space-y-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <label htmlFor="email" className="text-sm font-medium">
+              <label htmlFor="email" className="text-sm font-medium text-white">
                 Email Address
               </label>
               <div className="relative">
@@ -326,8 +326,8 @@ const Page = () => {
                   id="email"
                   name="email"
                   type="email"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.email ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.email ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Enter your email address"
                   value={formData.email}
@@ -339,7 +339,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.email}
                 </motion.p>
@@ -347,7 +347,7 @@ const Page = () => {
             </motion.div>
             <motion.button 
               type="submit" 
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="w-full bg-primary/60 text-white py-4 px-4 rounded-md hover:bg-primary/70 transition-colors duration-200 font-medium"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -386,7 +386,7 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-md bg-quinary text-white border-quaternary">
+      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
         <CardHeader>
           <motion.div 
             className="flex items-center space-x-2"
@@ -409,14 +409,14 @@ const Page = () => {
           </motion.div>
         </CardHeader>
         <form onSubmit={handleSubmit}>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6 px-8 py-6">
             <motion.div 
               className="space-y-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <label htmlFor="signup-username" className="text-sm font-medium">
+              <label htmlFor="signup-username" className="text-sm font-medium text-white">
                 Username
               </label>
               <div className="relative">
@@ -425,8 +425,8 @@ const Page = () => {
                   id="signup-username"
                   name="username"
                   type="text"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.username ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.username ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Choose a username"
                   value={formData.username}
@@ -438,7 +438,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.username}
                 </motion.p>
@@ -450,7 +450,7 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <label htmlFor="signup-email" className="text-sm font-medium">
+              <label htmlFor="signup-email" className="text-sm font-medium text-white">
                 Email Address
               </label>
               <div className="relative">
@@ -459,8 +459,8 @@ const Page = () => {
                   id="signup-email"
                   name="email"
                   type="email"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.email ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.email ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Enter your email address"
                   value={formData.email}
@@ -472,7 +472,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.email}
                 </motion.p>
@@ -484,7 +484,7 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <label htmlFor="signup-password" className="text-sm font-medium">
+              <label htmlFor="signup-password" className="text-sm font-medium text-white">
                 Password
               </label>
               <div className="relative">
@@ -493,8 +493,8 @@ const Page = () => {
                   id="signup-password"
                   name="password"
                   type="password"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.password ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.password ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Create a password"
                   value={formData.password}
@@ -506,7 +506,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.password}
                 </motion.p>
@@ -518,7 +518,7 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <label htmlFor="confirm-password" className="text-sm font-medium">
+              <label htmlFor="confirm-password" className="text-sm font-medium text-white">
                 Confirm Password
               </label>
               <div className="relative">
@@ -527,8 +527,8 @@ const Page = () => {
                   id="confirm-password"
                   name="confirmPassword"
                   type="password"
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qurate-purple ${
-                    errors.confirmPassword ? 'border-red-500' : 'border-gray-200'
+                  className={`w-full pl-10 pr-4 py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white/10 border-white/20 text-white placeholder-gray-400 ${
+                    errors.confirmPassword ? 'border-red-500' : 'border-white/20'
                   }`}
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
@@ -540,7 +540,7 @@ const Page = () => {
                 <motion.p 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-red-500 text-sm"
+                  className="text-red-400 text-sm"
                 >
                   {errors.confirmPassword}
                 </motion.p>
@@ -548,7 +548,7 @@ const Page = () => {
             </motion.div>
             <motion.button 
               type="submit" 
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="w-full bg-primary/60 text-white py-4 px-4 rounded-md hover:bg-primary/70 transition-colors duration-200 font-medium"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}

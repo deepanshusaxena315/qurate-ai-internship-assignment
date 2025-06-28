@@ -19,7 +19,7 @@ export default function Header({ variant }: { variant?: string }) {
 
     if (variant === "landing") {
       return (
-        <header className="p-6 bg-gradient-to-r from-black/20 to-black/10 backdrop-blur-sm absolute w-full z-40 flex justify-between items-center border-b border-white/10">
+        <header className="p-6 bg-quinary/80 backdrop-blur-sm absolute w-full z-40 flex justify-between items-center border-b border-white/10">
           <h1 className="text-white text-3xl font-bold tracking-tight hover:text-gray-200 transition-colors duration-200">
             Qurate AI
           </h1>
@@ -43,7 +43,7 @@ export default function Header({ variant }: { variant?: string }) {
   
     if (variant === "dashboard") {
       return (
-        <header className="p-6 bg-gradient-to-b from-gray-800/95 to-quaternary/90 backdrop-blur-md border-b border-gray-700/50 shadow-xl flex justify-between items-center">
+        <header className="p-6 bg-quinary backdrop-blur-md border-b border-gray-700/50 shadow-xl flex justify-between items-center">
           <h1 className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-purple-300 transition-all duration-300">
             Qurate Dashboard
           </h1>

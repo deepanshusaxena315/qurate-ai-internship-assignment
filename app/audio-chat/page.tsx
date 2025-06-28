@@ -54,7 +54,7 @@ const Page = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+    <div className="p-8">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -64,7 +64,7 @@ const Page = () => {
           transition={{ duration: 0.6 }}
         >
           <motion.h1 
-            className="text-3xl font-bold text-gray-800 mb-2"
+            className="text-3xl font-bold text-white mb-2"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -72,7 +72,7 @@ const Page = () => {
             Audio Chat
           </motion.h1>
           <motion.p 
-            className="text-gray-600"
+            className="text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -83,7 +83,7 @@ const Page = () => {
 
         {/* Main Card */}
         <motion.div 
-          className="bg-white rounded-2xl shadow-xl p-8"
+          className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-2xl shadow-xl p-8"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -95,14 +95,14 @@ const Page = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.div 
-              className="p-2 bg-blue-100 rounded-lg"
+              className="p-2 bg-blue-500/20 rounded-lg"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5, type: "spring", stiffness: 200 }}
             >
-              <Phone className="h-6 w-6 text-blue-600" />
+              <Phone className="h-6 w-6 text-blue-400" />
             </motion.div>
-            <h2 className="text-2xl font-semibold text-gray-800">Initiate a Call</h2>
+            <h2 className="text-2xl font-semibold text-white">Initiate a Call</h2>
           </motion.div>
 
           <div className="space-y-6">
@@ -147,13 +147,13 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <Label>Phone Number</Label>
+              <Label className="text-white">Phone Number</Label>
               <Input
                 type="tel"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 placeholder="e.g., 7021469507"
-                className="w-full"
+                className="w-full py-4 px-4 bg-white/10 border-white/20 text-white placeholder-gray-400"
               />
             </motion.div>
 
@@ -164,12 +164,12 @@ const Page = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <Label className="flex items-center space-x-2">
+              <Label className="flex items-center space-x-2 text-white">
                 <FileText className="h-4 w-4" />
                 <span>Select Form</span>
               </Label>
               <Select value={selectedForm} onValueChange={setSelectedForm}>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="w-full py-4 px-4 bg-white/10 border-white/20 text-white">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -190,7 +190,7 @@ const Page = () => {
             >
               <Button
                 onClick={handleInitiateCall}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                className="w-full bg-primary/60 text-white py-4 px-6 font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:bg-primary/70"
               >
                 <Phone className="h-5 w-5" />
                 <span>Initiate Call</span>
@@ -200,13 +200,13 @@ const Page = () => {
 
           {/* Additional Info */}
           <motion.div 
-            className="mt-6 p-4 bg-blue-50 rounded-lg"
+            className="mt-6 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            <h3 className="text-sm font-medium text-blue-800 mb-2">How it works:</h3>
-            <ul className="text-sm text-blue-700 space-y-1">
+            <h3 className="text-sm font-medium text-white mb-2">How it works:</h3>
+            <ul className="text-sm text-gray-300 space-y-1">
               <li>• Enter the recipient&apos;s phone number</li>
               <li>• Select a form to guide the conversation</li>
               <li>• Our AI will call and collect information naturally</li>
