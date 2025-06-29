@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Qurate AI – Internship Assignment
 
-## Getting Started
+This is a submission for the Qurate AI internship assignment, focused on designing and developing a clean, responsive UI for authentication and dashboard views.
 
-First, run the development server:
+🔗 **Live Site**: [qurate-ai-internship-assignment.vercel.app](https://qurate-ai-internship-assignment.vercel.app/)  
+📹 **Loom Walkthrough** (No audio): [Watch here](https://www.loom.com/share/a7cf449c547e4499b4068f91929ccd9b)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 14** – React framework for building performant web apps  
+- **Tailwind CSS** – Utility-first styling  
+- **Framer Motion** – Animations and transitions  
+- **Lucide Icons** – Beautiful, open-source icon library  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ⚡ Smooth, responsive login and dashboard UI
+- 📱 Fully responsive across mobile, tablet, and desktop
+- 🎯 Clean UX with consistent layout and modern design language
+- 🎞️ Page transitions using Framer Motion
+- 🌙 Dark mode-ready structure (easily extendable)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Screens
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Login Page** – Email/password form with iconography and motion
+- **Dashboard Page** – Clean layout to simulate a functional user dashboard
 
-## Deploy on Vercel
+## 🧩 Future Improvements (if extended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🔐 Auth integration (Firebase/Auth.js/etc.)
+- 🗂️ Dashboard data with API connection
+- 🌓 Fully implemented theme toggle
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
