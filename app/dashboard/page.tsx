@@ -3,7 +3,7 @@ import { MessageCircleMore, ShieldEllipsis } from "lucide-react"
 
 export default function Dashboard() {
   return (
-    <div className=" p-8">
+    <div className="bg-gradient-to-br from-quaternary/10 to-gray-950/10 p-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-100 mb-4">Welcome back !</h1>
@@ -12,8 +12,7 @@ export default function Dashboard() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Link href="/audio-chat" className="group">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/60 via-purple-900/60 to-indigo-900/60 p-16 pb-19 h-84 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-600/20 to-indigo-700/20"></div>
+            <div className="relative overflow-hidden bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer h-84 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
@@ -44,8 +43,7 @@ export default function Dashboard() {
           </Link>
 
           <Link href="/admin" className="group">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-900/60 via-emerald-900/60 to-teal-900/60  p-16 pb-19 h-84 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-emerald-600/20 to-teal-700/20"></div>
+            <div className="relative overflow-hidden bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer h-84 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">

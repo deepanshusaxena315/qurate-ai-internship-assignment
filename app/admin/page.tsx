@@ -6,8 +6,8 @@ import { motion } from 'framer-motion'
 
 const Page = () => {
   return (
-    <div className="p-8">
-      <div className="max-w-7xl mx-auto bg">
+    <div className="bg-gradient-to-br from-quaternary/10 to-gray-950/10 p-8">
+      <div className="max-w-3xl mx-auto bg">
         {/* Header */}
         <motion.div 
           className="mb-8"
@@ -35,7 +35,7 @@ const Page = () => {
 
         {/* Form Management Section */}
         <motion.div 
-          className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-8 mb-8"
+          className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer shadow-lg mb-8"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -153,7 +153,7 @@ const Page = () => {
           transition={{ duration: 0.6, delay: 1.1 }}
         >
           <motion.div 
-            className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg p-6"
+            className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer shadow-lg"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
@@ -176,7 +176,7 @@ const Page = () => {
           </motion.div>
 
           <motion.div 
-            className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg p-6"
+            className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer shadow-lg"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.3 }}
@@ -199,7 +199,7 @@ const Page = () => {
           </motion.div>
 
           <motion.div 
-            className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg p-6"
+            className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer shadow-lg"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}

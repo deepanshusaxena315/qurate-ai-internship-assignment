@@ -28,7 +28,7 @@ export default function Home() {
         </video>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/5 z-10" />
 
         {/* Foreground content */}
         <div className="relative z-30 flex flex-col items-center justify-center text-center h-full px-4">
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       {/* Learn More Section */}
-      <div ref={learnMoreRef} className="bg-gradient-to-br from-quinary to-gray-950/90 text-white py-20 px-4">
+      <div ref={learnMoreRef} className="bg-gradient-to-br from-quaternary/10 to-gray-950/10 text-white py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -92,10 +92,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-quaternary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
             >
               <div className="w-12 h-12 bg-emerald-900 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,10 +112,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-quaternary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
             >
               <div className="w-12 h-12 bg-emerald-900 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,10 +132,10 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-quaternary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer"
             >
               <div className="w-12 h-12 bg-emerald-900 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +157,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <div className="bg-quaternary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <div className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-semibold mb-4">Why Choose Qurate AI?</h3>
               <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Traditional forms are static and often frustrating. Qurate AI changes the game by creating dynamic, 

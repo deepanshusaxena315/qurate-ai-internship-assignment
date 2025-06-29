@@ -54,7 +54,7 @@ const Page = () => {
   }
 
   return (
-    <div className="p-8">
+    <div className="bg-gradient-to-br from-quaternary/10 to-gray-950/10 p-8">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -83,7 +83,7 @@ const Page = () => {
 
         {/* Main Card */}
         <motion.div 
-          className="bg-quaternary/30 backdrop-blur-sm border border-white/20 rounded-2xl shadow-xl p-8"
+          className="bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer shadow-xl"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}

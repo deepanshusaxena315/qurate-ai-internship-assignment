@@ -151,19 +151,19 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
-        <CardHeader>
+      <Card className="w-full max-w-lg bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer text-white">
+        <div className="mb-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <CardTitle>Login</CardTitle>
-            <CardDescription>Welcome back! Please enter your details.</CardDescription>
+            <h2 className="text-2xl font-bold mb-2">Login</h2>
+            <p className="text-gray-300">Welcome back! Please enter your details.</p>
           </motion.div>
-        </CardHeader>
+        </div>
         <form onSubmit={handleSubmit}>
-          <CardContent className="space-y-6 px-8 py-6">
+          <div className="space-y-6">
             <motion.div 
               className="space-y-2"
               initial={{ opacity: 0, x: -20 }}
@@ -243,8 +243,8 @@ const Page = () => {
             >
               Login
             </motion.button>
-          </CardContent>
-          <CardFooter className="flex flex-col space-y-2">
+          </div>
+          <div className="flex flex-col space-y-2 mt-6">
             <motion.div 
               className="text-center"
               initial={{ opacity: 0 }}
@@ -274,7 +274,7 @@ const Page = () => {
                 Sign up
               </button>
             </motion.div>
-          </CardFooter>
+          </div>
         </form>
       </Card>
     </motion.div>
@@ -287,7 +287,7 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
+      <Card className="w-full max-w-lg bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer text-white">
         <CardHeader>
           <motion.div 
             className="flex items-center space-x-2"
@@ -386,7 +386,7 @@ const Page = () => {
       exit={{ opacity: 0, scale: 0.9, y: -20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="w-full max-w-lg bg-quinary text-white border-quaternary">
+      <Card className="w-full max-w-lg bg-quinary/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer text-white">
         <CardHeader>
           <motion.div 
             className="flex items-center space-x-2"
@@ -581,7 +581,7 @@ const Page = () => {
   )
 
   return (
-    <div className="flex justify-center items-center min-h-screen backdrop-blur-md shadow-xl">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-quaternary/10 to-gray-950/10 backdrop-blur-md shadow-xl">
       <AnimatePresence mode="wait">
         {currentView === 'login' && renderLoginCard()}
         {currentView === 'forgot-password' && renderForgotPasswordCard()}
