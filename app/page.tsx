@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 import { Zap } from 'lucide-react'
 import Orb from '@/components/orb'
 import ShinyText from '@/components/shinytext';
-import { useState } from 'react'
 import BlurText from "@/components/blurtext";
 
 export default function Home() {

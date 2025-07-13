@@ -99,30 +99,31 @@ const BlurText: React.FC<BlurTextProps> = ({
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
-        const spanTransition: Transition = {
-          duration: totalDuration,
-          times,
-          delay: (index * delay) / 1000,
-        };
-        (spanTransition as any).ease = easing;
+const spanTransition: Transition & { ease: (t: number) => number } = {
+  duration: totalDuration,
+  times,
+  delay: (index * delay) / 1000,
+  ease: easing,
+};
 
         return (
-          <motion.span
-            key={index}
-            initial={fromSnapshot}
-            animate={inView ? animateKeyframes : fromSnapshot}
-            transition={spanTransition}
-            onAnimationComplete={
-              index === elements.length - 1 ? onAnimationComplete : undefined
-            }
-            style={{
-              display: "inline-block",
-              willChange: "transform, filter, opacity",
-            }}
-          >
-            {segment === " " ? "\u00A0" : segment}
-            {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
-          </motion.span>
+<motion.span
+  key={index}
+  initial={fromSnapshot}
+  animate={inView ? animateKeyframes : fromSnapshot}
+  transition={spanTransition}
+  onAnimationComplete={
+    index === elements.length - 1 ? onAnimationComplete : undefined
+  }
+  style={{
+    display: "inline-block",
+    willChange: "transform, filter, opacity",
+  }}
+>
+  {segment === " " ? "\u00A0" : segment}
+  {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
+</motion.span>
+
         );
       })}
     </p>
