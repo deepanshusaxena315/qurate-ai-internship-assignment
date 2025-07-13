@@ -1,6 +1,8 @@
 "use client"
 
 import { useRouter } from 'next/navigation'
+    import { motion } from "framer-motion";
+
 
 export default function Header({ variant }: { variant?: string }) {
     const router = useRouter()
@@ -17,29 +19,36 @@ export default function Header({ variant }: { variant?: string }) {
         router.push('/login')
     }
 
-    if (variant === "landing") {
-      return (
-        <header className="p-4 sm:p-6 bg-quinary/60 backdrop-blur-md absolute w-full z-40 flex justify-between items-center">
-          <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight hover:text-gray-200 transition-colors duration-200">
-            Qurate AI
-          </h1>
-          <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
-            <button 
-              onClick={handleLogin}
-              className="text-white/90 hover:text-white px-2 sm:px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-200 font-medium text-sm sm:text-base"
-            >
-              Login
-            </button>
-            <button 
-              onClick={handleSignup}
-              className="bg-white text-black px-3 sm:px-6 py-2 rounded-lg hover:bg-gray-200 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl text-sm sm:text-base"
-            >
-              Signup
-            </button>
-          </div>
-        </header>
-      )
-    }
+
+if (variant === "landing") {
+  return (
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1.6, delay: 0.4, ease: "easeOut" }}
+      className="p-4 sm:pb-4 absolute w-full z-40 flex justify-between items-center "
+    >
+      <h1 className="text-white text-xl sm:text-2xl lg:text-2xl font-bold tracking-tight hover:text-gray-200 transition-colors duration-200 pl-6">
+        Qurate AI
+      </h1>
+      <div className="flex items-center gap-2 sm:gap-4 lg:gap-6 pr-6">
+        <button
+          onClick={handleLogin}
+          className="text-white/90 hover:text-white px-2 sm:px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-200 font-medium text-sm sm:text-base"
+        >
+          Login
+        </button>
+        <button
+          onClick={handleSignup}
+          className="bg-white text-black px-3 sm:px-6 py-2 rounded-lg hover:bg-gray-200 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl text-sm sm:text-base"
+        >
+          Signup
+        </button>
+      </div>
+    </motion.header>
+  );
+}
+
   
     if (variant === "dashboard") {
       return (

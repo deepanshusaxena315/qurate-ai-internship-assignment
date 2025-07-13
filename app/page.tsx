@@ -3,6 +3,11 @@
 import { useRef } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Zap } from 'lucide-react'
+import Orb from '@/components/orb'
+import ShinyText from '@/components/shinytext';
+import { useState } from 'react'
+import BlurText from "@/components/blurtext";
 
 export default function Home() {
   const learnMoreRef = useRef<HTMLDivElement>(null)
@@ -10,13 +15,16 @@ export default function Home() {
   const scrollToLearnMore = () => {
     learnMoreRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
+  const handleAnimationComplete = () => {
+  console.log('Animation completed!');
+};
 
   return (
     <div className="relative w-full">
       {/* Hero Section */}
       <div className="relative w-full h-screen overflow-hidden text-white">
         {/* Background video */}
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -25,26 +33,48 @@ export default function Home() {
         >
           <source src="/bg-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/5 z-10" />
 
+
+        {/* <div style={{ width: '100%', height: '600px', position: 'relative' }} className='z-20'> */}
+          <div className="absolute inset-0 z-10 ">
+          <Orb
+            hoverIntensity={0.5}
+            rotateOnHover={true}
+            hue={0}
+            forceHoverState={false}
+          />
+        </div>
+
+
+
         {/* Foreground content */}
-        <div className="relative z-30 flex flex-col items-center justify-center text-center h-full px-4">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
-          >
-            Conversations, not clicks.
-          </motion.h1>
+        <div className="relative z-30 flex flex-col items-center justify-center text-center h-full px-4 pointer-events-none">
+          <div className="inline-flex items-center space-x-2 bg-transparent px-3 py-1 rounded-full text-sm font-medium mb-8 border-neutral-500 border-1">
+              <Zap className="w-4 h-4" />
+              <ShinyText text="Revolutionizing Impact Measurement" disabled={false} speed={6} className='custom-class ' />
+          </div>
+
+
+
+
+          <BlurText
+            text="Conversations, not clicks."
+            delay={200}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-4xl md:text-5xl text-white font-bold mb-8 drop-shadow-2xl"
+          />
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl max-w-2xl text-gray-300 drop-shadow-md leading-relaxed mt-10"
+            className="text-lg md:text-lg max-w-md text-gray-300 drop-shadow-md leading-relaxed mt-5 "
           >
             Qurate AI transforms static forms into smart conversations — making information flow naturally.
           </motion.p>

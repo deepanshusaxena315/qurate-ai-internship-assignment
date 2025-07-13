@@ -3,6 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@theme{
+    --animate-shine: 'shine 5s linear infinite',
+
+}
+    @keyframes shine {
+    0% { background-position: 100%; }
+    100% { background-position: -100%; }
+  }
+
 :root {
   --primary: #29d1ca;
   --secondary: #1c6162;
@@ -89,7 +99,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+
 }
+
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -137,6 +150,8 @@
   main {
     position: relative;
   }
+
+  
   
   /* Hide footer on landing page */
   main:has(> div[class*="h-screen"]) + footer {

@@ -265,6 +265,7 @@ const Page = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
+              
               Don&apos;t have an account?{" "}
               <button
                 type="button"
